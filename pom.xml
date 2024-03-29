@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>BSP-PlayerShops</groupId>
-	<artifactId>BSP-PlayerShops</artifactId>
+	<groupId>Genesis-PlayerShops</groupId>
+	<artifactId>Genesis-PlayerShops</artifactId>
 	<version>1.2.4</version>
 	<name>PlayerShops</name>
 	<build>
-		<finalName>BSP-PlayerShops</finalName>
+		<finalName>Genesis-PlayerShops</finalName>
 		<resources>
 			<resource>
 				<targetPath>.</targetPath>
@@ -56,6 +56,6 @@
 	<description>PlayerShops GUI is the most playerfriendly shop plugin.
 Using this plugin players will be able to create their own virtual shop, where they can sell their items. They will be able to browse around in a public shop listing, check out other shops and purchase items from other players. 
 Everything works with a intuitive inventory GUI - basically zero commands required! 
-PlayerShops is a BossShopPro addon. It requires BossShopPro or higher in order to work.</description>
+PlayerShops is a BossShopPro addon. It requires Genesis or higher in order to work.</description>
 	<url>https://www.spigotmc.org/resources/29568/</url>
 </project>
