@@ -1,5 +1,5 @@
 #A list of available icons, starting with the highest one. If 'AllowIconSelection: false' and playerheads are disabled, shops will automatically pick the highest available icon here.
-#In the 'Icon' section of every item you can define its look using all possible BossShopPro item data. Besides you can specify permission and shop slots requirements.
+#In the 'Icon' section of every item you can define its look using all possible Genesis item data. Besides you can specify permission and shop slots requirements.
 #Giving an item a custom name or lore will override the default ShopIcon look defined in the messages.yml file.
 List:
   TNT:

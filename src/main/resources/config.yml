@@ -1,8 +1,8 @@
 # PlayerShops
-# by Felix Neubauer
+# by MageMonkeyStudios
 # Check out following page for more information: https://www.spigotmc.org/resources/29568/
 #
-#This is the currency which will be used. Supported are: "Money" (working with Vault), "Points" (check BossShopPro for more info) and "Exp".
+#This is the currency which will be used. Supported are: "Money" (working with Vault), "Points" (check Genesis for more info) and "Exp".
 PriceType: money
 #If enabled players need specific permissions in order to create a shop, purchase additional slots, etc.
 #If disabled anyone can create and handle their own shop. Note: Configurable permissions like the ones needed for a better shoplisting spot are enabled anyways.
