@@ -2,7 +2,7 @@ name: PlayerShops
 version: ${project.version}
 api-version: 1.13
 description: Genesis Addon - Allow your players to create public GUI shops
-author: Black_ixx,MageMonkeyStudios
+author: Black_ixx,MageMonkeyStudio
 website: http://felix.neuby.de
 main: studio.magemonkey.genesis.addon.playershops.PlayerShops
 depend: [Genesis]
