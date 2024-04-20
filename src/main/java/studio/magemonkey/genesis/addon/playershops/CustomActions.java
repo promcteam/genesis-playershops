@@ -62,16 +62,16 @@ public class CustomActions implements GenesisCustomActions {
             case ACTION_SAVE_SHOP:
                 shop = plugin.getShopsManager().getPlayerShop(p.getUniqueId());
                 if (shop != null) {
-                    boolean shop_opened = false;
+                    boolean shopOpened = false;
                     if (ClassManager.manager.getPlugin().getAPI().isValidShop(p.getOpenInventory())) {
                         GenesisShopHolder holder =
                                 ((GenesisShopHolder) p.getOpenInventory().getTopInventory().getHolder());
                         if (holder.getShop().equals(shop.getShopEdit())) {
-                            shop_opened = true;
+                            shopOpened = true;
                         }
                     }
                     shop.finishEdit(true);
-                    if (shop_opened) { //if shop was opened re-open new shop
+                    if (shopOpened) { //if shop was opened re-open new shop
                         shop.getShop().openInventory(p);
                     }
                 }
