@@ -1,16 +1,11 @@
 package studio.magemonkey.genesis.addon.playershops.objects;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import lombok.Getter;
-import studio.magemonkey.genesis.addon.playershops.PlayerShops;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import studio.magemonkey.genesis.addon.playershops.PlayerShops;
 import studio.magemonkey.genesis.core.GenesisBuy;
 import studio.magemonkey.genesis.core.GenesisShop;
 import studio.magemonkey.genesis.core.conditions.GenesisCondition;
@@ -19,14 +14,19 @@ import studio.magemonkey.genesis.core.prices.GenesisPriceType;
 import studio.magemonkey.genesis.inbuiltaddons.advancedshops.ActionSet;
 import studio.magemonkey.genesis.inbuiltaddons.advancedshops.GenesisBuyAdvanced;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class PlayerShopItem {
     private final ItemStack item;
     @Getter
     private final double    pricePerUnit;
     @Getter
-    private int   amount;
+    private       int       amount;
     @Getter
-    private int[] levels;
+    private       int[]     levels;
 
 
     public PlayerShopItem(ItemStack item, int amount, double pricePerUnit) {
@@ -108,21 +108,48 @@ public class PlayerShopItem {
         Map<ClickType, ActionSet> actions = null;
         if (levels.length >= 2) {
             actions = new HashMap<>();
-            actions.put(ClickType.RIGHT, new ActionSet(plugin.getGenesisListener().getRewardTypeShopItem(), plugin.getGenesisListener().getPriceTypePlayerShopsCurrency(), create(levels[1]), levels[1] * pricePerUnit, plugin.getMessages().get("ItemPreview.MessageRight"), null, null, null));
+            actions.put(ClickType.RIGHT,
+                    new ActionSet(plugin.getGenesisListener().getRewardTypeShopItem(),
+                            plugin.getGenesisListener().getPriceTypePlayerShopsCurrency(),
+                            create(levels[1]),
+                            levels[1] * pricePerUnit,
+                            plugin.getMessages().get("ItemPreview.MessageRight"),
+                            null,
+                            null,
+                            null));
         }
         if (levels.length >= 3) {
-            actions.put(ClickType.MIDDLE, new ActionSet(plugin.getGenesisListener().getRewardTypeShopItem(), plugin.getGenesisListener().getPriceTypePlayerShopsCurrency(), create(levels[2]), levels[2] * pricePerUnit, plugin.getMessages().get("ItemPreview.MessageMiddle"), null, null, null));
+            actions.put(ClickType.MIDDLE,
+                    new ActionSet(plugin.getGenesisListener().getRewardTypeShopItem(),
+                            plugin.getGenesisListener().getPriceTypePlayerShopsCurrency(),
+                            create(levels[2]),
+                            levels[2] * pricePerUnit,
+                            plugin.getMessages().get("ItemPreview.MessageMiddle"),
+                            null,
+                            null,
+                            null));
         }
 
         //Conditions
-        GenesisCondition condition = new GenesisSingleCondition(plugin.getGenesisListener().getPlayerShopItemCondition(), "instock", "true");
+        GenesisCondition condition =
+                new GenesisSingleCondition(plugin.getGenesisListener().getPlayerShopItemCondition(), "instock", "true");
 
         //Set up shopitem
-        GenesisBuy buy = new GenesisBuyAdvanced(plugin.getGenesisListener().getRewardTypeShopItem(), plugin.getGenesisListener().getPriceTypePlayerShopsCurrency(), create(1),
-                pricePerUnit, plugin.getMessages().get("ItemPreview.MessageLeft"), -1, null, name, condition, null, null, actions);
+        GenesisBuy buy = new GenesisBuyAdvanced(plugin.getGenesisListener().getRewardTypeShopItem(),
+                plugin.getGenesisListener().getPriceTypePlayerShopsCurrency(),
+                create(1),
+                pricePerUnit,
+                plugin.getMessages().get("ItemPreview.MessageLeft"),
+                -1,
+                null,
+                name,
+                condition,
+                null,
+                null,
+                actions);
 
         ItemStack item = this.item.clone();
-        ItemMeta meta = item.getItemMeta();
+        ItemMeta  meta = item.getItemMeta();
 
 
         boolean has_lore = meta.hasLore();
@@ -162,28 +189,34 @@ public class PlayerShopItem {
 
 
     public GenesisBuy createShopItemEdit(PlayerShops plugin, String name, GenesisShop shop) {
-        GenesisBuy buy = new GenesisBuy(plugin.getGenesisListener().getRewardTypeShopItemEdit(), GenesisPriceType.Nothing, create(1), null, null, -1, null, name, null, null, null);
+        GenesisBuy buy = new GenesisBuy(plugin.getGenesisListener().getRewardTypeShopItemEdit(),
+                GenesisPriceType.Nothing,
+                create(1),
+                null,
+                null,
+                -1,
+                null,
+                name,
+                null,
+                null,
+                null);
 
         ItemStack item = this.item.clone();
-        ItemMeta meta = item.getItemMeta();
+        ItemMeta  meta = item.getItemMeta();
 
-        boolean has_lore = meta.hasLore();
-        if (!has_lore) {
-            meta.setLore(new ArrayList<String>());
-        }
-
-        List<String> list = meta.getLore();
+        boolean      has_lore = meta.hasLore();
+        List<String> lore     = has_lore && meta.getLore() != null ? meta.getLore() : new ArrayList<>();
         if (has_lore) { //Separate new info lore and item lore
-            list.add(0, " ");
-            list.add(0, " ");
+            lore.add(0, " ");
+            lore.add(0, " ");
         }
 
-        list.add(0, plugin.getMessages().get("ItemEditPreview.Rest"));
-        list.add(0, " ");
-        list.add(0, plugin.getMessages().get("ItemEditPreview.Amount"));
-        list.add(0, plugin.getMessages().get("ItemEditPreview.Price"));
+        lore.add(0, plugin.getMessages().get("ItemEditPreview.Rest"));
+        lore.add(0, " ");
+        lore.add(0, plugin.getMessages().get("ItemEditPreview.Amount"));
+        lore.add(0, plugin.getMessages().get("ItemEditPreview.Price"));
 
-        meta.setLore(list);
+        meta.setLore(lore);
         item.setItemMeta(meta);
         buy.setItem(item, false);
         buy.setShop(shop);
