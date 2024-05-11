@@ -151,13 +151,12 @@ public class PlayerShopItem {
         ItemStack item = this.item.clone();
         ItemMeta  meta = item.getItemMeta();
 
-
-        boolean has_lore = meta.hasLore();
-        if (!has_lore) {
-            meta.setLore(new ArrayList<>());
+        List<String> list     = meta.getLore();
+        boolean      has_lore = list != null && !list.isEmpty();
+        if (list == null) {
+            list = new ArrayList<>();
         }
 
-        List<String> list = meta.getLore();
         if (has_lore) { //Separate new info lore and item lore
             list.add(0, " ");
             list.add(0, " ");
