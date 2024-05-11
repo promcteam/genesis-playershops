@@ -16,7 +16,7 @@
         will be able to browse around in a public shop listing, check out other shops and purchase items from other
         players.
         Everything works with a intuitive inventory GUI - basically zero commands required!
-        PlayerShops is a BossShopPro addon. It requires Genesis or higher in order to work.
+        PlayerShops is a Genesis addon. It requires Genesis or higher in order to work.
     </description>
 
     <repositories>
