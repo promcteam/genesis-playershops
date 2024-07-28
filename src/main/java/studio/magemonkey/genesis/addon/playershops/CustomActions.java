@@ -3,6 +3,7 @@ package studio.magemonkey.genesis.addon.playershops;
 import org.bukkit.entity.Player;
 import studio.magemonkey.genesis.addon.playershops.objects.PlayerShop;
 import studio.magemonkey.genesis.addon.playershops.objects.PlayerShopsUserInputRename;
+import studio.magemonkey.genesis.api.InventoryUtil;
 import studio.magemonkey.genesis.core.GenesisCustomActions;
 import studio.magemonkey.genesis.core.GenesisShopHolder;
 import studio.magemonkey.genesis.managers.ClassManager;
@@ -65,7 +66,7 @@ public class CustomActions implements GenesisCustomActions {
                     boolean shopOpened = false;
                     if (ClassManager.manager.getPlugin().getAPI().isValidShop(p.getOpenInventory())) {
                         GenesisShopHolder holder =
-                                ((GenesisShopHolder) p.getOpenInventory().getTopInventory().getHolder());
+                                ((GenesisShopHolder) InventoryUtil.getTopInventory(p.getOpenInventory()).getHolder());
                         if (holder.getShop().equals(shop.getShopEdit())) {
                             shopOpened = true;
                         }
