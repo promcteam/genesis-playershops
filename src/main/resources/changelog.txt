@@ -8,23 +8,23 @@ v1.2.3
 * [UPDATE] Update for Spigot 1.13.*
 
 
-v1.2.2 (Needs BossShopPro v1.9.5 or higher)
-*[UPDATE] Updated to BossShopPro v1.9.5
+v1.2.2 (Needs Genesis v1.9.5 or higher)
+*[UPDATE] Updated to Genesis v1.9.5
 
 
-v1.2.1 (Needs BossShopPro v1.9.1 or higher)
-*[UPDATE] Updated to BossShopPro v1.9.1
+v1.2.1 (Needs Genesis v1.9.1 or higher)
+*[UPDATE] Updated to Genesis v1.9.1
 
 
-v1.2.0 (Needs BossShopPro v1.8.3 or higher)
-*[UPDATE] Updated to BossShopPro v1.8.3
+v1.2.0 (Needs Genesis v1.8.3 or higher)
+*[UPDATE] Updated to Genesis v1.8.3
 
 
 v1.1.8
 *[IMPROVE] Admin commands can now delete shops of offline players
 
 
-v1.1.7 (Needs BossShopPro v1.7.5 or higher)
+v1.1.7 (Needs Genesis v1.7.5 or higher)
 *[ADD] Added new admin command which allows saving the shop of a certain player and stopping edit mode of the shop
 *[IMPROVE] If permissions are enabled players now need the "PlayerShops.createSign.other" permission in order to create signs which link to shops of other players
 
@@ -34,16 +34,16 @@ v1.1.6
 *[FIX] Small bugfix related to the "RemoveItemsOutOfStock" setting
 
 
-v1.1.5 (Needs BossShopPro v1.7.2 or higher)
+v1.1.5 (Needs Genesis v1.7.2 or higher)
 *[FIX] Small bugfix (PlayerShops was incompatible with some server software, for example KCauldron)
 
 
-v1.1.4 (Needs BossShopPro v1.7.0 or higher)
-*[UPDATE] Updated to BossShopPro v1.7.0
+v1.1.4 (Needs Genesis v1.7.0 or higher)
+*[UPDATE] Updated to Genesis v1.7.0
 
 
-v1.1.3 (Needs BossShopPro v1.6.8 or higher)
-*[UPDATE] Updated to BossShopPro v1.6.8
+v1.1.3 (Needs Genesis v1.6.8 or higher)
+*[UPDATE] Updated to Genesis v1.6.8
 
 
 v1.1.2
@@ -55,9 +55,9 @@ v1.1.1
 *[IMPROVE] Now hiding items which are out of stock for visitors
 
 
-v1.1.0 (Needs BossShopPro v1.6.5 or higher)
+v1.1.0 (Needs Genesis v1.6.5 or higher)
 *[IMPROVE] Small improvements
-*[UPDATE] Updated to BossShopPro v1.6.5
+*[UPDATE] Updated to Genesis v1.6.5
 *[FIX] Shop icon name bug
 
 
@@ -70,8 +70,8 @@ v1.0.6
 *[FIX] Always using default slot limit, not reading config value properly (due to one small typo)
 
 
-v1.0.5 (Needs BossShopPro v1.6.1 or higher)
-*[UPDATE] Updated to BossShopPro v1.6.1
+v1.0.5 (Needs Genesis v1.6.1 or higher)
+*[UPDATE] Updated to Genesis v1.6.1
 
 
 v1.0.4
@@ -82,7 +82,7 @@ v1.0.3
 *[IMPROVE] Improved sign layout (player names are line two now and support color codes)
 
 
-v1.0.2 (Requires BossShopPro v1.5.7)
+v1.0.2 (Requires Genesis v1.5.7)
 *[ADD] Added admin commands which allow deleting/creating shops
 
 
@@ -119,7 +119,7 @@ v0.0.6
 *[FIX] Not working without Spigot code (-> errors when using plain Bukkit)
 
 
-v0.0.5 (Requires BossShopPro v1.4.1)
+v0.0.5 (Requires Genesis v1.4.1)
 *[ADD] Added item blacklist
 *[IMPROVE] Made the feature which prevents special plugins items (like a server selector) from being sold optional because it might be incompatible with some poorly written plugins
 
