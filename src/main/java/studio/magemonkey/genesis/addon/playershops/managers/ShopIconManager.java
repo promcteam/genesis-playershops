@@ -111,7 +111,7 @@ public class ShopIconManager {
 
         if (!meta.hasLore() || use_default_text) {
             List<String> lore = new ArrayList<String>();
-            String       desc = inventoryitem ? plugin.getMessages().get("ShopIcon.InventoryItemDescription")
+            String desc = inventoryitem ? plugin.getMessages().get("ShopIcon.InventoryItemDescription")
                     : plugin.getMessages().get("ShopIcon.DefaultDescription");
             if (shop != null) {
                 desc = desc.replace("%playershopname%", shop.getShopDisplayName());

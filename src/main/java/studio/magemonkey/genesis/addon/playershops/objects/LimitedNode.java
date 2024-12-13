@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 public class LimitedNode {
 
-    private final int slots;
+    private final int    slots;
     private final String perm;
 
     public LimitedNode(ConfigurationSection s) {

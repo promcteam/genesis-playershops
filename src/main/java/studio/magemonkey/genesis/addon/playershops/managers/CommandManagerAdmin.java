@@ -21,7 +21,10 @@ public class CommandManagerAdmin implements CommandExecutor {
 
     @SuppressWarnings("deprecation")
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender,
+                             @NotNull Command command,
+                             @NotNull String label,
+                             String[] args) {
         if (plugin.getShopsManager() != null) {
             if (sender.hasPermission("PlayerShops.Admin")) {
                 if (args.length != 0) {

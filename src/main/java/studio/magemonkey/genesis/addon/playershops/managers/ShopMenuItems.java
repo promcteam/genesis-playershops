@@ -1,7 +1,7 @@
 package studio.magemonkey.genesis.addon.playershops.managers;
 
-import studio.magemonkey.genesis.addon.playershops.objects.ShopMenuItem;
 import org.bukkit.configuration.file.FileConfiguration;
+import studio.magemonkey.genesis.addon.playershops.objects.ShopMenuItem;
 
 public class ShopMenuItems {
 

@@ -25,15 +25,15 @@ public class Settings {
     private final int    creationSlots;
 
     private final boolean              slotsEnabled;
-    private final String slotsPrice;
+    private final String               slotsPrice;
     @Getter
-    private final int    slotsAmount;
+    private final int                  slotsAmount;
     @Getter
-    private final int    slotsLimit;
+    private final int                  slotsLimit;
     private final Map<String, Integer> slotPermissions;
-    private final boolean slotPermissionsEnabled;
+    private final boolean              slotPermissionsEnabled;
     @Getter
-    private final int     editDelay;
+    private final int                  editDelay;
 
     private final List<String> ranking;
 
